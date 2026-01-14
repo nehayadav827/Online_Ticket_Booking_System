@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>🎟️ Ticket Booking System</h1>
+        <p class="subtitle">Book your tickets with ease</p>
+    </header>
+
+    <main class="main-content">
+        <section class="events-section">
+            <div class="section-header">
+                <h2>Available Events</h2>
+                <button onclick="loadEvents()" class="btn btn-primary">
+                    <span>📥</span> Load Events
+                </button>
+            </div>
+            <div id="events" class="events-display">
+                <div class="empty-state">
+                    <p>Click "Load Events" to see available events</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <h2>Book Ticket</h2>
+            <form class="booking-form" onsubmit="event.preventDefault(); book();">
+                <div class="form-group">
+                    <label for="eventId">Event ID</label>
+                    <input
+                            type="text"
+                            id="eventId"
+                            placeholder="Enter Event ID"
+                            required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="userId">User ID</label>
+                    <input
+                            type="text"
+                            id="userId"
+                            placeholder="Enter User ID"
+                            required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="seats">Seats</label>
+                    <input
+                            type="text"
+                            id="seats"
+                            placeholder="Enter seat numbers (e.g., A1, A2, B3)"
+                            required
+                    />
+                </div>
+                <button type="submit" class="btn btn-success">
+                    <span>✓</span> Book Ticket
+                </button>
+            </form>
+        </section>
+
+        <section class="result-section">
+            <h2>Result</h2>
+            <pre id="result" class="result-display">No results yet</pre>
+        </section>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
