@@ -21,7 +21,10 @@ POST /events
 GET /events  
 POST /bookings
 
-## Interview Highlights
-- Handles race conditions
-- Scalable backend design
-- Production-ready concurrency strategy
+
+## How to Run in your system
+Download the zip file
+extract it and run TicketBookingSystemApplication.java
+and run this site http://localhost:9090/ in your browser
+
+
